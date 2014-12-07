@@ -18,7 +18,7 @@ top_part :: Int -> [String]
 top_part h = [line h n ++ "\n" | n <- [0..h]]
 
 generate :: Int -> String
-generate h = concat $ mirror $ top_part h
+generate = concat . mirror . top_part
 
 diamond :: Char -> String
 diamond c = case height c of
